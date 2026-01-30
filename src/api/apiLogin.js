@@ -2,8 +2,9 @@ import { apiClient } from "./apiClient";
 
 export const apiLogin = async (userNo, password) => {
   console.log(userNo, password);
-  return apiClient.post("/login/", {
-    // return apiClient.post("/api/login/", {
+  //mysql
+  // return apiClient.post("/login/", {
+  return apiClient.post("/api/login", {
     userno: userNo,
     password: password,
   });
