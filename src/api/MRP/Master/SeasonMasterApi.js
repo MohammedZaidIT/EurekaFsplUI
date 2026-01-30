@@ -1,7 +1,7 @@
 import { apiClient } from "../../apiClient";
 
 export const SeasonMasterApi = () => {
-  // return apiClient.get("/mrp/season/seasons/");
+  // return apiClient.get("/mrp/season/seasons/");.
    return apiClient.get("/api/digiseason/digiseason");
 }; 
 
