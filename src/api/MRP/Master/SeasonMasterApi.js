@@ -10,7 +10,7 @@ export const SeasonMasterSaveApi = (payload) => {
     // "/mrp/season/seasons/",
       "/api/digiseason/digiseason",
     payload
-    //nh
+    //nhrf
   );
 };
 export const SeasonUpdateApi = (id, payload) => {
