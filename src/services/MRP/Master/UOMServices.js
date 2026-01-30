@@ -5,6 +5,6 @@ export const UOMServices = () => UOMMasterApi();
 export const UOMSaveServices = (payload) => {
   return UOMMasterSaveApi(payload);
 };
-export const UOMUpdateServices=(id,payload)=>{
+export const UomUpdateServices=(id,payload)=>{
   return UOMUpdateApi(id,payload);
 }
