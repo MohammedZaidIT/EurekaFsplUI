@@ -4,7 +4,7 @@ import { ItemGroupMasterServices,ItemGroupSaveServices } from "../../../services
 export function useItemGroupMaster() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [data, setData] = useState([]);
+  const [datas, setData] = useState([]);
 
   const ItemGroupData = async () => {
     try {
@@ -14,10 +14,10 @@ export function useItemGroupMaster() {
       const res = await ItemGroupMasterServices();
       setData(res.data.data);
 
-      console.log("Hierarchy RESPONSE:", res.data);
+      console.log("RESPONSE:", res.data);
     } catch (err) {
       setError(err);
-      console.error("Error in HierarchyData:", err);
+      console.error("Error:", err);
     } finally {
       setLoading(false);
     }
@@ -37,5 +37,5 @@ export function useItemGroupMaster() {
       setLoading(false);
     }
   };
-  return { ItemGroupData, loading, data, error,ItemGroupSave };
+  return { ItemGroupData, loading, datas, error,ItemGroupSave };
 }

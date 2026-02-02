@@ -25,7 +25,8 @@ export default function ExchangeRate() {
     currency_name: "",
     import_rate: "",
     export_rate: "",
-    CostingExportRate: "",
+    // CostingExportRate: "",
+    costingexportrate:"",
   })
 
   const handleChange=(e)=>{
@@ -51,7 +52,7 @@ function handelSave(){
         currency_name: "",
         import_rate: "",
         export_rate: "",
-        CostingExportRate: "",
+        costingexportrate: "",
       });
       //Refresh list → new record appears
        ExchangeRateData();
@@ -80,7 +81,7 @@ function handelSave(){
       currency_name: row.currency_name,
       import_rate: row.import_rate,
       export_rate: row.export_rate,
-      CostingExportRate: row.CostingExportRate,
+      costingexportrate: row.costingexportrate,
     });
   };
 
@@ -119,7 +120,7 @@ const columns = [
   {
     name: "Costing Rate",
     selectorKey: "CostingExportRate",
-    selector: row => row.CostingExportRate,
+    selector: row => row.costingexportrate,
     sortable: true,
   },
   {
@@ -222,14 +223,14 @@ const columns = [
       <Box sx={{ flex: "0 0 140px" }}>
         <FormControl fullWidth>
           <TextField
-            name="CostingExportRate"
+            name="costingexportrate"
             size="small"
             label="Costing"
             type="number"
             onChange={handleChange}
-            error={!!errors.CostingExportRate}
-            helperText={errors.CostingExportRate}
-            value={formData.CostingExportRate}
+            error={!!errors.costingexportrate}
+            helperText={errors.costingexportrate}
+            value={formData.costingexportrate}
             sx={{ "& .MuiOutlinedInput-root": { borderRadius: "7px" } }}
           />
         </FormControl>
