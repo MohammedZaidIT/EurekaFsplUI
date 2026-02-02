@@ -66,11 +66,15 @@ export default function ItemGroup() {
   }, []);
 
   const columns = [
-    { name: "Group Code", selector: r => r.GroupCode, sortable: true },
-    { name: "Group Name", selector: r => r.GroupName, sortable: true },
-    { name: "UOM1", selector: r => r.Uom1 },
-    { name: "UOM2", selector: r => r.Uom2 },
-    { name: "Hierarchy1", selector: r => r.Hierarchy1 },
+    { name: "GCode", selector: r => r.groupcode, sortable: true },
+    { name: "G Name", selector: r => r.groupname, sortable: true },
+    { name: "UOM1", selector: r => r.uom1 },
+    { name: "UOM2", selector: r => r.uom2 },
+    { name: "Hir1", selector: r => r.hierarchy1 },
+    { name: "Hir2", selector: r => r.hierarchy2 },
+    { name: "Hir3", selector: r => r.hierarchy3 },
+    { name: "Hir4", selector: r => r.hierarchy4 },
+    { name: "Hir5", selector: r => r.hierarchy5 },
     { name: "Active", selector: r => r._ListInMrp },
   ];
 

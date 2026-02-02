@@ -1,12 +1,17 @@
-import { apiClientNew } from "../../apiClient";
+import { apiClient, apiClientNew } from "../../apiClient";
 
 export const ItemGroupMasterApi = () => {
-  return apiClientNew.get("/api/group/itemgroup");
+  // return apiClient.get("/mrp/ItemGroup/ItemGroups/");
+    return apiClient.get("/api/group/itemgroup");
 }; 
 
 export const ItemGroupSaveApi = (payload) => {
-  return apiClientNew.post(
-    "/api/group/itemgroup/",
+  // return apiClient.post(
+  //   "/mrp/ItemGroup/ItemGroups/",
+  //   payload
+  // );
+   return apiClient.post(
+    "/api/group/itemgroup",
     payload
   );
 };
